@@ -1,0 +1,222 @@
+doctype html
+html(lang='es')
+	head 
+		meta(charset='utf-8')
+		title IGV Peru
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+		meta(name='author', content='IGV Peru')
+		meta(name='description', content='La calculadora de igv, que amarás')
+		meta(name='keyword', content='calculadora, igv, peru, impuesto, cronograma')
+		link(rel='icon', type='image/png', href='./client/img/logo-culqi.png')
+		link(rel='stylesheet', type='text/css', href='./client/css/main.css')
+	body 
+		header.header-desktop
+			span.icon-bars
+			ul 
+				li 
+					a(href='#') Beneficios
+				li 
+					a(href='#') Lo que dicen
+				li 
+					a(href='#') Caracteristicas
+				li
+					a(href='#')
+						img(src='./client/img/logo.png')
+				li
+					a(href='#') Ayuda
+				li
+					a(href='#') Contacto
+				li
+					a(href='#') 
+						span.icon-appleinc
+						p Descargar
+		header.header-movil
+			span.icon-bars
+			a(href='#')
+				img(src='./client/img/logo.png')
+		section.home-container
+			.home-background
+				.home-content
+					h1 La calculadora de igv , que amarás
+					p.home-text Calcular igv nunca fue tán facil, rapido y sencillo.
+					p.home-text Ahorra mucho tiempo, para que lo inviertas haciendo lo que más te gusta.
+					a(href='#')
+						span.icon-play2
+						p Ver video
+				img(src='./client/img/header_iphone.png')
+		.feature-container
+			.feature
+				img(src='./client/img/icon-lock.png')
+				p Cronograma de pagos
+				p Escribe el ruc que desees para conocer el cronograma de pago.
+				p Y guardalo, junto al nombre de tu empresa, para que te lelgue uan notificacion, cuando se acerca la fecha de pagar.
+			.feature
+				img(src='./client/img/icon-clock.png')
+				p Consulta rápida
+				p Revisa tus consultas frecuentes, para una busqueda rapida.
+				p Esto te permitira, reducir el tiempo, en averiguar cuales fueron los ultimos pagos que haz realizado.
+		.notifications-container
+			img(src='./client/img/iphone-feature.png')
+			.notifications-content
+				h2 Notificaciones en tiempo real
+				p Que no se te pase ningun pago por realizar.
+				p Ahorra con IGV Peru, puedes estar sin preocuparte, y con la seguridad, de que estas al dia en tus pagos.
+				.row-notifications
+					a(href='#')
+						p Probarlo
+						span.icon-arrow-right
+					a(href='#') Más info
+		.global-container
+			.global-content
+				h2 Somos una herramienta global
+				p IGV Peru, se puede usar en cualquier parte del mundo.
+				p No importa, si el igv en tu pais es totalmente diferente. Porque ahora con la nueva versión podrás seleccionar el porcentaje de igv que desees.
+				p PARTNERS:
+				.row-partners
+					img(src='./client/img/dropbox.png')
+					img(src='./client/img/evernote.png')
+			img(src='./client/img/map.png').image-map
+		.screenshots-container
+			p Como usarlo
+			p Rapido y sencillo
+			.row-screenshots
+				img(src='./client/img/img-1.png')
+				img(src='./client/img/img-2.png')
+				img(src='./client/img/main-img.png')
+				img(src='./client/img/img-3.png')
+				img(src='./client/img/img-4.png')
+		.download-container
+			img(src='./client/img/name.png').image-logo
+			p Descárgalo en tu smartphone
+			.email-container
+				input(type='text', placeholder='Correo electrónico')
+				a(href='#')
+					| Enviar invitación
+					span.icon-arrow-right
+			p O descárgalo para
+			a(href='#').image-apple
+				img(src='./client/img/button-appstore.png')
+		.what-they-say-container
+			span.icon-angle-left.prev
+			.commentary
+				.row-photos
+					.photo
+						img(src='./client/img/user1.jpg')
+						.filter-image
+					.photo.photo-activated
+						img(src='./client/img/user2.jpg')
+						.filter-image
+					.photo
+						img(src='./client/img/user3.jpg')
+						.filter-image
+				p Jose Quispe Vasquez
+				p Sin dudas, la mejor aplicaicon, me sirvio de mucho. Sin dudas, la mejor aplicaicon, me sirvio de mucho.
+				.row-stars
+					span.icon-star
+					span.icon-star
+					span.icon-star
+					span.icon-star
+					span.icon-star
+			span.icon-angle-right.next
+		.plans-container
+			.plans-left
+				p Escoge el plan perfecto
+				p Yo soy
+				input(type='checkbox' id='off-on')
+				label(for='off-on')
+					span Individual
+					span Compañia
+				p Cuando quieras, puedes cambiarte de plan y disfrutar de más beneficios
+				p 
+					| ¿Quieres un descuento?
+					a(href='#') Solicitalo aquí
+			.plans-right
+				.starter-card
+					p Básico
+					p Free
+					p Cada mes puedes renovar o cancelar tu suscripción
+					p.benefits 
+						span.icon-check
+						| Acceso durante todo el mes
+					p.benefits 
+						span.icon-check
+						| Notificaciones en tiempo real
+					a(href='#') Elegir plan
+				.pro-card
+					p Pro
+					p $4.99
+					p Si eres una empresa, este es tu plan
+					p.benefits 
+						span.icon-check
+						| Acceso durante todo el mes
+					p.benefits 
+						span.icon-check
+						| Notificaciones en tiempo real
+					p.benefits 
+						span.icon-check
+						| Asistencia personal
+					a(href='#') Elegir plan
+		.subscribe-container
+			p Suscribe a nuestro newsletters			
+			.email-container
+				input(type='text', placeholder='Correo electrónico')
+				a(href='#') Subscribirme
+			p Te prometemos, que no recibirás ningún span
+		footer 
+			.footer-left
+				img(src='./client/img/logo.png')
+				p IGV Perú, es la aplicación que te hara librarte de muchas preocupaciones, podiendo estar al día en tus pagos.
+				a(href='#')
+					img(src='./client/img/app-store-download.png')
+				.row-social-links
+					a(href='#' target='_blank')
+						span.icon-twitter
+					a(href='#' target='_blank')
+						span.icon-facebook2
+					a(href='#' target='_blank')
+						span.icon-google-plus
+					a(href='#' target='_blank')
+						span.icon-tumblr
+					a(href='#' target='_blank')
+						span.icon-social-pinterest
+					a(href='#' target='_blank')
+						span.icon-social-linkedin
+			.footer-right
+				ul 
+					li Preguntas frecuentes
+					li
+						a(href='#') Como descargarlo
+					li
+						a(href='#') Beneficios
+					li
+						a(href='#') Costos
+					li 
+						a(href='#') Descuentos
+				ul 
+					li Acerca de nosotros
+					li
+						a(href='#') Blog
+					li
+						a(href='#') Prensa
+					li
+						a(href='#') Misión
+					li 
+						a(href='#') Visión
+				ul 
+					li Desarrolladores
+					li
+						a(href='#') Api
+					li
+						a(href='#') Uso
+					li
+						a(href='#') Github
+					li 
+						a(href='#') Únete
+			.footer-bottom
+				.contact 
+					p ¿Quieres un página web?
+					a(mailto= 'william.nolasco@gmail.com') william.nolascob@gmail.com
+				.powered-by
+					p Hecho con mucho amor, por:
+					a(href='#') 
+						img(src='./client/img/craftwork.png')

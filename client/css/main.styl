@@ -1,0 +1,961 @@
+@import url(icons.css)
+
+@font-face
+	font-family 'Lato-Light'
+	src url(../fonts/Lato/Lato-Light.ttf)
+@font-face
+	font-family 'Lato-Regular'
+	src url(../fonts/Lato/Lato-Regular.ttf)
+@font-face
+	font-family 'Lato-Bold'
+	src url(../fonts/Lato/Lato-Bold.ttf)
+	
+color-text = #93969a
+blue = #267df4
+lead = #ccc
+lead-background = #f5f5f8
+lead-dark = #bdbec0
+black = #26272d
+green = #6fc754
+yellow = #f2bc3b
+
+flex-row-wrap(justify-content, align-items)
+	display flex 
+	flex-flow row wrap
+	justify-content justify-content
+	align-items align-items
+flex-column-wrap(justify-content, align-items)
+	display flex 
+	flex-flow column wrap 
+	justify-content justify-content
+	align-items align-items
+styles-section(background)
+	width 100%
+	background-color background
+	position relative
+	left 0
+	top 0
+	overflow  hidden
+styles-button(width, height, background, color)
+	width width
+	height height
+	background-color background
+	color color
+	border-radius 2rem
+styles-line()
+	content ''
+	width 84%
+	height 1px 
+	border-bottom  1px solid rgba(lead, 0.2)
+	position absolute
+
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+
+html
+	font-size 15px	
+body
+	font-family 'Lato-Regular'
+	color color-text
+ul 
+	list-style none
+a 
+	text-decoration none
+	display inline-block
+span 
+	display flex
+.header-movil
+	display none
+.header-desktop
+	flex-row-wrap(flex-start, center)
+	width 85%
+	height 100px
+	position absolute
+	left 50%
+	top 0
+	-webkit-transform translateX(-50%)
+	transform translateX(-50%)
+	z-index 2
+	.icon-bars
+		font-size 1.7rem
+		margin-right 30px
+		cursor pointer
+		color black
+	ul 
+		flex-row-wrap(space-around, center)
+		width calc(100% - 60px)
+		li 
+			a 
+				color black
+				font-family 'Lato-Bold'
+			&:nth-of-type(4)
+				margin 0 90px
+				a 
+					font-size 1.6rem
+			&:nth-last-child(1)
+				a 
+					flex-row-wrap(center, center)
+					styles-button(150px, 40px, blue, white)
+					span 
+						font-size 1.2rem
+						margin-right 15px
+					p 
+						font-size 1.1rem
+						font-family 'Lato-Bold'
+			&:nth-last-child(3)
+				a 
+					color lead
+.email-container
+	width 500px
+	height 45px
+	line-height 45px
+	position relative
+	input
+		width 100%
+		height 45px
+		line-height 45px
+		background-color transparent
+		border-radius 2rem
+		border 1px solid lead
+		font-size 1rem
+		font-family 'Lato-Regular'
+		outline 0
+		&:focus
+			outline 0
+	a 
+		flex-row-wrap(center, center)
+		styles-button(auto, 35px, green, white)
+		padding 0 20px
+		position absolute
+		right 5px
+		top 50%
+		-webkit-transform translateY(-50%)
+		transform translateY(-50%)
+		span 
+			font-size 1.2rem
+			margin-left 10px		
+.home-container
+	styles-section(white)
+	height 700px
+	background-image url(../img/banner_background.jpg)
+	background-size cover
+	background-position center 0px
+	background-repeat no-repeat
+	z-index 1
+	.home-background
+		width 100%
+		height 100%
+		background-color rgba(185, 192, 230, 0.2)
+		position absolute
+		left 0
+		top 0
+		z-index 2
+		.home-content
+			flex-column-wrap(center, center)
+			width 60%
+			position absolute
+			left 50%
+			top 150px
+			-webkit-transform translateX(-50%)
+			transform translateX(-50%)
+			h1
+				line-height 1.1
+				margin-bottom 40px
+				font-size 3rem
+				color black
+				font-family 'Lato-Light'
+				text-align center
+			p 
+				font-size 1.2rem
+				text-align center
+			a 
+				flex-row-wrap(center, center)
+				styles-button(160px, 40px, transparent, color-text)
+				border 1px solid rgba(color-text, 0.4)
+				margin-top 40px
+				span 
+					margin-right 15px
+					color black
+				p 
+					font-size 1.1rem
+					color black
+		img 
+			width 240px
+			height 450px	
+			position absolute
+			left 50%
+			bottom -175px
+			-webkit-transform translateX(-50%)
+			transform translateX(-50%)
+.feature-container
+	flex-row-wrap(center, flex-start)
+	styles-section(white)
+	height auto
+	padding 80px 50px
+	.feature
+		flex-column-wrap(flex-start, flex-start)
+		width 35%
+		&:nth-of-type(2)
+			margin-left 7%
+		p 
+			&:nth-of-type(1)
+				font-size 1.4rem
+				margin 40px 0 20px
+				color rgba(black, 0.8)
+				font-family 'Lato-Regular'
+			&:nth-of-type(2), &:nth-of-type(3)
+				font-size 1.1rem
+			&:nth-of-type(2)
+				margin-bottom 10px
+.notifications-container
+	flex-row-wrap(center, center)
+	styles-section(white)
+	padding 80px 50px
+	&:after
+		styles-line()
+		top 0
+	img 
+		max-width 50%
+		position relative
+		left -15%
+	.notifications-content
+		flex-column-wrap(center, flex-start)
+		width 40%
+		position relative
+		left -8%
+		h2 
+			font-family 'Lato-Light'
+			line-height 1.1
+			font-size 2.2rem
+			margin-bottom 50px
+			color black
+		p 
+			font-size 1.1rem
+			&:nth-of-type(1)
+				margin-bottom 10px
+		.row-notifications
+			flex-row-wrap(flex-start, center)
+			margin-top 40px
+			a 
+				flex-row-wrap(center, center)
+				&:nth-of-type(1)
+					styles-button(170px, 40px, blue, white)
+					p 
+						font-size 1.1rem
+						margin 0
+						margin-right 50px
+					span 
+						font-size 1.2rem
+						color white
+				&:nth-of-type(2)
+					styles-button(130px, 40px, transparent, color-text)
+					border 1px solid lead
+					margin-left 30px
+					color black
+					font-family 'Lato-Bold'
+.global-container
+	flex-row-wrap(center, center)
+	styles-section(white)
+	padding 80px 50px
+	.global-content
+		width 40%
+		flex-column-wrap(center, flex-start)
+		position relative
+		left 3%
+		h2 
+			line-height 1.1
+			font-size 2.2rem
+			margin-bottom 50px
+			font-family 'Lato-Light'
+			color black
+		p 
+			font-size 1.1rem
+			&:nth-of-type(1)
+				margin-bottom 10px
+			&:nth-of-type(3)
+				font-size 0.8rem
+				font-weight bolder
+				margin-top 40px
+				color black
+		.row-partners
+			flex-row-wrap(center, flex-start)
+			margin-top 20px
+			img 
+				width 150px
+				height 37px
+				&:nth-of-type(1)
+					margin-right 30px
+	.image-map
+		max-width 60%
+		position relative
+		right -10%
+.screenshots-container
+	styles-section(lead-background)
+	flex-column-wrap(center, center)
+	padding 80px 50px
+	p 
+		&:nth-of-type(1)
+			font-size 2.2rem
+			position relative
+			color black
+			&:after
+				content ''
+				width 40px 
+				height 2px
+				background-color blue
+				position absolute
+				left 50%
+				bottom -30px
+				-webkit-transform translateX(-50%)
+				transform translateX(-50%)
+		&:nth-of-type(2)
+			font-size 0.8rem
+			font-weight bolder
+			text-transform upperCase
+			margin-top 60px
+	.row-screenshots
+		flex-row-wrap(center, center)
+		flex-flow row nowrap
+		margin-top 40px
+		img
+			width 230px
+			height 400px
+			margin 0 15px
+			box-shadow 0px 10px 35px 10px rgba(191, 191, 191, 0.7)
+			&:nth-of-type(3)
+				width 260px
+				height 500px
+				box-shadow none
+				margin 0 5px
+.download-container
+	flex-column-wrap(center, center)
+	styles-section(lead-background)
+	padding 80px 50px 
+	.image-logo
+		margin-bottom 30px
+	p 
+		&:nth-of-type(1)
+			font-size 2.2rem
+			font-family 'Lato-Bold'
+			color black
+			margin-bottom 40px
+		&:nth-of-type(2)
+			font-family 'Lato-Regular'
+			color lead
+			margin-top 40px 
+			margin-bottom 20px
+	.email-container 
+		input 
+			padding 0 210px 0 30px
+	.image-apple
+		img 
+			width 150px 
+			height 45px
+.what-they-say-container
+	flex-row-wrap(center, flex-start)
+	styles-section(white)
+	padding 80px 50px 
+	.prev, .next
+		font-size 3rem
+		color lead
+		position relative
+		top 20px
+		cursor pointer
+	.commentary
+		flex-column-wrap(flex-start, center)
+		width 45%
+		margin 0 60px
+		.row-photos
+			flex-row-wrap(center, center)
+			margin-bottom 50px
+			.photo
+				width 70px 
+				height 70px
+				border-radius 50%
+				position relative
+				margin 0 40px
+				&:nth-of-type(2)
+					.filter-image
+						display none
+				img, .filter-image
+					width 100% 
+					height 100%
+					border-radius 50%
+				.filter-image
+					background-color rgba(white, 0.6)
+					position absolute
+					left 0
+					top 0
+			.photo-activated
+				width 90px
+				height 90px
+				box-shadow 15px 15px 35px 10px rgba(0, 0, 0, 0.2)
+		p 
+			text-align center
+			&:nth-of-type(1)
+				font-size 1.8rem
+				font-family 'Lato-Bold'
+				margin-bottom 30px
+			&:nth-of-type(2)
+				width 90%
+				font-size 1.1rem
+		.row-stars
+			flex-row-wrap(center, center)
+			margin-top 20px
+			span 
+				font-size 1.5rem
+				color yellow
+				margin 0 10px
+.plans-container
+	flex-row-wrap(center, center)
+	styles-section(lead-background)
+	padding 80px 50px 
+	.plans-left
+		flex-column-wrap(center, flex-start)
+		width 24%
+		margin-right 10%
+		p 
+			&:nth-of-type(1)
+				color black
+				font-size 1.9rem
+				font-family 'Lato-Bold'
+				margin-bottom 50px 
+			&:nth-of-type(2)
+				color black
+				text-transform upperCase
+				font-family 'Lato-Bold'
+				font-weight bolder
+				margin-bottom 20px
+			&:nth-of-type(3)
+				font-size 1.1rem
+				margin-top 70px 
+				margin-bottom 30px
+			&:nth-of-type(4)
+				a 
+					color blue
+					text-decoration underline
+					margin-left 10px
+		#off-on
+			display none
+		label
+			flex-row-wrap(center, center)
+			width 240px
+			height 50px
+			line-height 50px
+			border-radius 2rem
+			border 1px solid lead 
+			position relative
+			span
+				flex-row-wrap(center, center)
+				width 50%
+				font-family 'Lato-Bold'
+				text-align center
+				color black
+				z-index 2
+		label:before
+			content ''
+			width 50%
+			height 40px
+			background-color white
+			border-radius 2rem
+			text-align center
+			position absolute
+			left 5px
+			z-index 1
+			transition all 0.6s ease
+			box-shadow 10px 10px 35px 5px rgba(0, 0, 0, 0.2)
+		#off-on:checked ~ label:before
+			left 113px
+			transition all 0.6s ease
+	.plans-right
+		flex-row-wrap(center, center)
+		width 660px
+		.starter-card, .pro-card
+			flex-column-wrap(center, center)
+			width 50%
+			background-color white 
+			padding 40px 
+			p 
+				text-align center
+				&:nth-of-type(1)
+					font-size 1.8rem
+					margin-bottom 15px
+				&:nth-of-type(2)
+					width 80px
+					height 35px 
+					line-height 35px
+					font-weight bolder
+					text-transform upperCase
+					color black
+					border-radius 2rem
+					border 1px solid lead
+				&:nth-of-type(3)
+					font-size 1.1rem
+					margin 40px 0
+			.benefits
+				flex-row-wrap(center, flex-start)
+				flex-flow row nowrap
+				margin-bottom 15px
+				font-family 'Lato-Bold'
+				color black
+				span 
+					font-size 1.2rem
+					color green
+					margin-right 5px
+			a 
+				flex-row-wrap(center, center)
+				margin-top 40px
+		.starter-card
+			background-color white
+			box-shadow 0px 10px 35px 5px rgba(0, 0, 0, 0.1)
+			z-index 2
+			a 
+				styles-button(80%, 40px, blue, white)
+		.pro-card
+			background-color #ebebed
+			position relative
+			left -20px
+			z-index 1
+			-webkit-transform scale(0.85)
+			transform scale(0.85)
+			a 
+				styles-button(80%, 40px, transparent, blue)
+				border 1px solid blue
+.subscribe-container
+	flex-column-wrap(center, center)
+	styles-section(white)
+	padding 80px 50px
+	&:after
+		styles-line()
+		bottom 0
+	p 
+		text-align center
+		&:nth-of-type(1)
+			font-family 'Lato-Bold'
+			color black
+			font-size 1.9rem
+			margin-bottom 40px 
+		&:nth-of-type(2)
+			margin-top 20px
+	.email-container
+		input 
+			padding 0 160px 0 30px
+footer
+	flex-row-wrap(center, flex-start)
+	styles-section(white)
+	padding 80px 50px 20px
+	.footer-left
+		width 25%
+		flex-column-wrap(flex-start, flex-start)
+		p 
+			text-align left
+			margin 30px 0
+		.row-social-links
+			flex-row-wrap(flex-start, center)
+			margin-top 30px
+			a 
+				margin-right 20px 
+				span 
+					font-size 1.2rem
+					color lead-dark
+				&:nth-last-child(1), &:nth-last-child(2)
+					span 
+						font-size 1.8rem
+	.footer-right
+		width 65%
+		flex-row-wrap(flex-end, flex-start)
+		ul 
+			flex-column-wrap(flex-start, flex-start)
+			margin 0 40px
+			li 
+				margin-bottom 15px
+				&:nth-of-type(1)
+					color black
+					font-family 'Lato-Bold'
+				a 
+					color color-text
+	.footer-bottom
+		flex-row-wrap(space-between, center)
+		width 90%
+		position relative
+		padding-top 25px
+		margin-top 90px
+		&:before
+			styles-line()
+			width 100%
+			top 0
+			left 50%
+			-webkit-transform translateX(-50%)
+			transform translateX(-50%)
+		.contact
+			flex-row-wrap(flex-start, center)
+			a 
+				color blue
+				text-decoration underline
+				margin-left 10px
+		.powered-by
+			flex-row-wrap(flex-end, center)
+			p 
+				margin-right 10px
+@media screen and (max-width: 1161px)
+	.header-desktop
+		width 100%
+		padding-left 40px
+		ul 
+			li 
+				&:nth-of-type(4)
+					margin 0
+	.home-container
+		background-image url(../img/banner_background2.jpg)
+	.what-they-say-container
+		.commentary
+			width 70%
+	.plans-container
+		.plans-left
+			align-items center
+			width 100%
+			margin-bottom 50px
+			margin-right 0
+			p 
+				&:nth-of-type(1)
+					margin-bottom 30px
+				&:nth-last-child(1), &:nth-last-child(2)
+					display none
+		.plans-right 
+			margin-left 60px
+@media screen and (max-width: 1095px)
+	.header-desktop
+		display none
+	.header-movil
+		flex-row-wrap(center, center)
+		width 100%
+		padding 0 40px 
+		height 70px
+		position absolute
+		left 0
+		top 0
+		z-index 2
+		span 
+			font-size 1.8rem
+			color black
+			position absolute
+			left 40px
+			cursor pointer
+		a 
+			height 16px
+	.home-container
+		height 500px
+		.home-background
+			.home-content
+				h1 
+					font-size 2.1rem
+			img 
+				display none
+	.feature-container, .notifications-container, .global-container, .screenshots-container, .what-they-say-container, .plans-container, .subscribe-container, .download-container
+		padding 60px
+	.feature-container
+		.feature
+			width 45%
+			&:nth-of-type(2)
+				margin-left 10%
+	.notifications-container
+		img 
+			max-width 40%
+			left 0
+		.notifications-content
+			width 55%
+			margin-left 5%
+			left 0
+	.global-container
+		.global-content
+			width 55%
+			margin-right 5%
+			left 0
+		.image-map
+			max-width 40%
+			right 0
+	footer 
+		padding 60px 60px 20px
+		.footer-left, .footer-right
+			width 100%
+			align-items center
+		.footer-left
+			justify-content center
+			margin-bottom 60px
+			p 
+				width 60%
+				text-align center
+			.row-social-links
+				a 
+					margin 0 20px
+		.footer-right
+			justify-content space-around
+			ul 
+				margin 0
+		.footer-bottom
+			margin-top 60px
+@media screen and (max-width: 1000px)
+	.home-container
+		background-image url(../img/banner_background3.jpg)	
+@media screen and (max-width: 920px)
+	html 
+		font-size 16px
+	.feature-container
+		.feature
+			p 
+				&:nth-of-type(3)
+					display none
+	footer 
+		.footer-bottom
+			flex-column-wrap(center, center)
+			width 95%
+			padding-top 35px
+			.contact
+				margin-bottom 10px
+@media screen and (max-width: 810px)
+	.home-container
+		height 400px
+		.home-background
+			.home-content
+				.home-text 
+					display none
+				a 
+					margin-top 0
+	.notifications-container 
+		.notifications-content
+			h2 
+				font-size 1.8rem
+				margin-bottom 30px
+			p
+				&:nth-of-type(2)
+					display none
+			.row-notifications 
+				margin-top 20px
+	.screenshots-container
+		p 
+			&:nth-of-type(1)
+				font-size 1.8rem
+		.row-screenshots
+			img 
+				width 180px
+				height 310px
+				&:nth-of-type(3)
+					width 210px
+					height 410px
+	.global-container
+		.global-content 
+			p 
+				&:nth-of-type(2)
+					display none
+				&:nth-of-type(3)
+					margin-top 20px
+			h2 
+				font-size 1.8rem
+				margin-bottom 30px
+	.what-they-say-container
+		.commentary
+			width 80%
+			margin 0
+			p 
+				&:nth-of-type(1)
+					font-size 1.5rem
+	.download-container
+		p 
+			&:nth-of-type(1)
+				font-size 1.8rem
+	.plans-container
+		.plans-left 
+			p 
+				&:nth-of-type(1)
+					font-size 1.8rem
+	.subscribe-container
+		p 
+			&:nth-of-type(1)
+				font-size 1.8rem
+@media screen and (max-width: 740px)
+	.feature-container
+		flex-column-wrap(center, center)
+		.feature 
+			flex-column-wrap(center, center)
+			width 80%
+			&:nth-of-type(2)
+				margin-left 0
+				margin-top 40px
+			p 
+				text-align center
+				&:nth-of-type(1)
+					margin 30px 0 15px
+	.notifications-container
+		img 
+			display none
+		.notifications-content
+			flex-column-wrap(center, center)
+			width 80%
+			margin-left 0
+			h2, p 
+				text-align center
+	.global-container
+		.global-content
+			flex-column-wrap(center, center)
+			width 80%
+			margin-right 0
+			h2, p 
+				text-align center
+		.image-map
+			display none
+	.what-they-say-container
+		.commentary
+			width calc(100% - 40px)
+			.row-photos
+				width 100%
+				justify-content space-around
+				.photo
+					width 50px 
+					height 50px
+					margin 0
+				.photo-activated 
+					width 60px 
+					height 60px
+					box-shadow 15px 15px 35px 5px rgba(0,0,0,0.1)
+	.plans-container
+		.plans-left
+			p 
+				&:nth-of-type(1)
+					text-align center
+		.plans-right
+			flex-column-wrap(center, center)
+			width auto
+			margin-left 0
+			.starter-card, .pro-card
+				width 280px
+				padding 30px 15px
+			.pro-card
+				left 0
+				-webkit-transform scale(1)
+				transform scale(1)
+				margin-top 60px
+@media screen and (max-width: 630px)
+	.home-container
+		.home-background
+			.home-content
+				width 90%
+	.notifications-container
+		.notifications-content
+			width 100% 
+	.screenshots-container
+		.row-screenshots
+			img 
+				width 140px
+				height 250px
+				&:nth-of-type(3)
+					width 170px
+					height 340px
+	.global-container
+		.global-content
+			width 100%
+	.download-container, .subscribe-container
+		.email-container
+			width 90%
+	.download-container
+		p 
+			&:nth-of-type(1)
+				text-align center
+	footer
+		.footer-left
+			p 
+				width 100%
+			.row-social-links
+				justify-content center
+				a 
+					margin 0 20px 20px
+		.footer-right
+			ul 
+				width 50%
+				align-items center
+				li 
+					text-align center
+				&:nth-of-type(3)
+					margin-top 30px
+		.footer-bottom
+			.contact, .powered-by
+				justify-content center
+			.contact
+				p, a 
+					text-align center
+@media screen and (max-width: 470px)
+	html 
+		font-size 17px
+	.header-movil
+		span 
+			left 15px
+			font-size 1.5rem
+	.feature-container, .notifications-container, .global-container, .screenshots-container, .download-container, .what-they-say-container, .plans-container, .subscribe-container
+		padding 40px 20px
+	.notifications-container
+		.notifications-content
+			.row-notifications
+				flex-column-wrap(center, center)
+				a 
+					&:nth-of-type(2)
+						margin-left 0
+						margin-top 20px
+	.global-container
+		.global-content
+			.row-partners
+				flex-column-wrap(center, center)
+				img 
+					&:nth-of-type(1)
+						margin-right 0
+						margin-bottom 20px
+	.screenshots-container
+		.row-screenshots
+			img
+				width 100px
+				height 170px
+				&:nth-of-type(3)
+					width 130px
+					height 250px
+	.email-container
+		flex-column-wrap(center, center)
+		height 80px
+		margin-bottom 20px
+		input 
+			height 40px 
+			line-height 40px
+			padding 0 20px !important
+			text-align center
+		a
+			width 200px
+			position relative
+			right 0
+	.what-they-say-container
+		.commentary
+			p 
+				&:nth-of-type(2)
+					font-size 1rem
+			.row-photos
+				.photo 
+					display none 
+				.photo-activated
+					display flex
+	.plans-container
+		.plans-right
+			.starter-card, .pro-card
+				width 90%
+	footer 
+		padding 40px 20px 20px
+		.footer-right 
+			ul 
+				width 90%
+				&:nth-of-type(2)
+					margin-top 30px
+		.footer-bottom
+			.contact
+				margin-bottom 30px
+			.powered-by
+				p 
+					text-align center
+		
+	
